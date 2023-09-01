@@ -1,0 +1,51 @@
+ /* Common styles for all views */
+ body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  .section {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+  .section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    background-color: #ffa500; /* Orange background color for section title */
+    color: white;
+  }
+  
+  /* Desktop view */
+  @media (min-width: 992px) {
+    .section {
+      width: calc(33.33% - 40px);
+      margin: 0 20px 20px 0;
+    }
+  }
+  
+  /* Tablet view */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .section {
+      width: calc(50% - 20px);
+      margin: 0 20px 20px 0;
+    }
+    .section:nth-child(3) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+  
+  /* Mobile view */
+  @media (max-width: 767px) {
+    .section {
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+  }
